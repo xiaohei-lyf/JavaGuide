@@ -370,4 +370,8 @@ s=list.toArray(new String[0]);//没有指定类型的话会报错
 ![不要在 foreach 循环里进行元素的 remove/add 操作](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019/7/foreach-remove:add.png)
 
 
+原因：//        这种方式的问题在于，删除元素后继续循环会报错误信息ConcurrentModificationException，
+//        因为元素在使用的时候发生了并发的修改，导致异常抛出。但是删除完毕马上使用break跳出，则不会触发报错。
+
+
 
